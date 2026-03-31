@@ -47,31 +47,8 @@ const Hero = ({ darkMode }) => {
           <div className='lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center
           lg:text-left mb-12 lg:mb-0'>
 
-            <div className='flex justify-center lg:justify-start gap-4
-            sm:gap-6 mb-6 sm:mb-7 w-full'>
-
-              {socialIcons.map((social, index) => (
-                <a
-                key={index}
-                href='#'
-                target='_blank'
-                data-aos-delay={`${400 + index * 100}`}
-                className='transform hover:scale-110 transition-transform duration-300'>
-                  <img
-                  src={social.icon}
-                  alt={social.alt}
-                  className={`w-8 h-8 sm:w-10 sm:h-10 object-contain
-                  ${darkMode
-                    ? ''
-                    : 'filter brightness-75'
-                  }`}/>
-                </a>
-              ))}
-
-            </div>
-
             <h1 className={`title-font text-3xl sm:text-4xl
-              lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
+              lg:text-5xl mb-4 mt-8 font-bold ${theme.textPrimary}`}
               data-aos='fade-up'
               data-aos-delay='500'
               >
@@ -88,13 +65,47 @@ const Hero = ({ darkMode }) => {
             ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
+            <div className='flex justify-center lg:justify-start gap-4
+            sm:gap-6 mb-6 sm:mb-7 w-full'>
+
+              {socialIcons.map((social, index) => (
+                <a
+                key={index}
+                href='#'
+                target='_blank'
+                data-aos="fade-up"
+                data-aos-delay={`${450 + index * 150}`}
+
+                /* Example:
+
+                  If index is:
+
+                  0 → delay = 400 + 0*100 = 400ms
+                  1 → delay = 500ms
+                  2 → delay = 600ms
+                  3 → delay = 700ms */
+
+                className='transform hover:scale-110 transition-transform duration-300'>
+                  <img
+                  src={social.icon}
+                  alt={social.alt}
+                  className={`w-8 h-8 sm:w-8 mt-8 sm:mt-2 sm:h-8 object-contain
+                  ${darkMode
+                    ? ''
+                    : 'filter brightness-75'
+                  }`}/>
+                </a>
+              ))}
+
+            </div>
+
             {/* BUTTNS */}
 
             <div className='w-full pt-4 sm:pt-8'>
               <div className='flex flex-col sm:flex-row justify-center
               lg:justify-start gap-3 sm:gap-4'
               data-aos='fade-up'
-              data-aos-delay='700'>
+              data-aos-delay='800'>
 
                 <a href={CV} download className='w-full sm:w-auto'>
                   <button className='w-full sm:w-auto inline-flex items-center justify-center
