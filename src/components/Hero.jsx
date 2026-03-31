@@ -41,7 +41,7 @@ const Hero = ({ darkMode }) => {
       data-aos-delay='250'
       className='body-font z-10'>
 
-        <div className='container mx-auto flex px-4 sm:px-8 lg:px-14
+        <div className='container max-w-7xl mx-auto flex px-4 sm:px-8 lg:px-14
         py-12 lg:py-14 flex-col lg:flex-row items-center justify-between lg:mt-14 mt-14'>
 
           <div className='lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center
@@ -55,7 +55,7 @@ const Hero = ({ darkMode }) => {
               Hi, I'm Nadeeshika
             </h1>
 
-            <p className={`mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-lg
+            <p className={`mb-6 sm:mb-8 leading-relaxed max-w-lg sm:max-w-lg
               ${theme.textSecondary}`}
               data-aos='fade-up'
               data-aos-delay='600'>

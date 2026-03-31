@@ -8,7 +8,7 @@ const About = ({darkMode}) => {
     className={`min-h-screen overflow-hidden flex items-center
     justify-center px-4 sm:px-6`}>
 
-        <div className='max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2
+        <div className='max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2
         gap-8 sm:gap-12 items-center'>
             <figure
             data-aos='fade-up'
