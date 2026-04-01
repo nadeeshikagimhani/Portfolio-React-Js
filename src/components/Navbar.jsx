@@ -73,7 +73,7 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
                     {navItems.map((item) => (
                         <a key={item.name}
                         href={item.link}
-                        onClick={() => handleNavClick(item.name)}
+                        onClick={() => handleNavSection(item.name)}
                         className="relative"
                         >
                             <motion.span
@@ -175,7 +175,7 @@ const Navbar = ({ darkMode, toggleDarkMode}) => {
                             <a
                             key={item.name}
                             href={item.link}
-                            onClick={() => handleNavClick(item.name)}
+                            onClick={() => handleNavSection(item.name)}
                             className="block">
                                 <motion.div
                                 whileHover={{ x: 5 }}

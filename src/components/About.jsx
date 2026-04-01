@@ -4,7 +4,7 @@ import about from '../assets/about.png'
 const About = ({darkMode}) => {
   return (
     <section
-    id='#about'
+    id='about'
     className={`min-h-screen overflow-hidden flex items-center
     justify-center px-4 sm:px-6`}>
 
