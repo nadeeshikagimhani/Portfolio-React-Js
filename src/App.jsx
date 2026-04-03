@@ -6,6 +6,8 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
+import ContactUs from "./components/ContactUs"
+import Footer from "./components/Footer"
 
 const App = () => {
 
@@ -42,6 +44,8 @@ const App = () => {
       <About darkMode={darkMode} />
       <Skills darkMode={darkMode} />
       <Projects darkMode={darkMode} />
+      <ContactUs darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
 
     </div>
   )

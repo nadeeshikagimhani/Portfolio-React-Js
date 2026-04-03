@@ -1,8 +1,32 @@
 import { motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react"
+import { useEffect } from "react";
 
 const Navbar = ({ darkMode, toggleDarkMode}) => {
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section");
+      
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+              }
+            });
+          },
+          {
+            threshold: 0.6, // adjust for when it triggers
+          }
+        );
+      
+        sections.forEach((section) => observer.observe(section));
+      
+        return () => {
+          sections.forEach((section) => observer.unobserve(section));
+        };
+      }, []);
 
     const [activeSection, setActiveSection] = useState('home');
     const[isMenuOpen, setIsMenuOpen] = useState(false)
